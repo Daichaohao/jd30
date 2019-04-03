@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* 设置移动端所有标签都要设置盒模型防止边框 padding把盒子变大出滚动条（禁止出现横向滚动条的） */
+  box-sizing: border-box;
+  /* 去掉a等标签能够点击的标签的高亮背景色 移动端特殊的（按住才会触发） */
+  -webkit-tap-highlight-color: transparent;
+  /* 去掉所有标签内边框 */
+  outline: 0;
+}
+html {
+  font-size: 26.66667vw;
+}
+body {
+  font-size: .14rem;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+img {
+  vertical-align: middle;
+}
+input {
+  border: 0;
+  outline: 0;
+}
+/* 清除浮动公共类（使用flex布局基本上用不到浮动了 ） */
+.clearfix::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+/* 头部容器 */
+#header {
+  left: 0;
+  top: 0;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+#header .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+}
+#header .left .icon-logo {
+  width: 60px;
+  height: 23px;
+  background: url(../images/sprites.png)-0px -110px / 200px 200px ;
+}
+#header .center {
+  flex: 1;
+}
+#header .center form {
+  position: relative;
+  padding: 5px 0;
+}
+#header .center form .icon-search {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/sprites.png)-58px -110px /200px 200px;
+}
+#header .center form input {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 30px;
+}
+#header .right {
+  width: 50px;
+  height: 40px;
+}
+#header .right a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+}
+#slide img {
+  width: 100%;
+}
+#nav {
+  padding: 10px 0;
+}
+#nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav ul li {
+  width: 25%;
+}
+#nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#nav ul li a img {
+  width: 40px;
+}
+#nav ul li a p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+#main {
+  background-color: #eee;
+  padding: 10px ;
+  margin-bottom: 50px;
+}
+#main .seckill {
+  background-color: #fff;
+}
+#main .seckill .title {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+#main .seckill .title .left {
+  display: flex;
+}
+#main .seckill .title .left img {
+  width: 20px;
+  height: 25px;
+  margin-left: 5px;
+}
+#main .seckill .title .left > span {
+  margin-left: 5px;
+  color: #de181b;
+}
+#main .seckill .title .left .downtime {
+  margin-left: 5px;
+}
+#main .seckill .title .left .downtime span {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 15px;
+  background-color: #000;
+  color: #fff;
+}

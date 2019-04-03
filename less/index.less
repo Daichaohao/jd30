@@ -1,0 +1,166 @@
+// 在主页的index.less中去引入公共base.less 一般引包放在前面引入
+@import 'base.less';
+// base改了主页也要保存 手动保存一下
+
+/* 头部容器 */
+#header {
+    left: 0;
+    top: 0;
+    display: flex;
+    position: fixed;
+    // background-color: pink;
+    width: 100%;
+    z-index: 999;
+
+    .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 40px;
+
+        .icon-logo {
+            width: 60px;
+            height: 23px;
+            background: ~"url(../images/sprites.png)-0px -110px / 200px 200px ";
+
+
+        }
+
+    }
+
+    .center {
+        flex: 1;
+
+        form {
+            position: relative;
+            padding: 5px 0;
+
+            .icon-search {
+                position: absolute;
+                top: 10px;
+                left: 5px;
+                width: 20px;
+                height: 20px;
+                background: ~"url(../images/sprites.png)-58px -110px /200px 200px";
+            }
+
+            input {
+                width: 100%;
+                height: 30px;
+                border-radius: 15px;
+                padding-left: 30px;
+
+            }
+
+        }
+    }
+
+    .right {
+        width: 50px;
+        height: 40px;
+
+        a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+        }
+    }
+}
+
+// 轮播图区域
+#slide {
+    img {
+        width: 100%;
+    }
+}
+
+#nav {
+    padding: 10px 0;
+
+    ul {
+        // 只在一行显示
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            width: 25%;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                img {
+                    width: 40px;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+
+}
+
+#main {
+    background-color: #eee;
+    padding: 10px ;
+    margin-bottom: 50px;
+    .seckill {
+        background-color: #fff;
+        .title {
+            display: flex;
+            justify-content: center;
+            height: 40px;
+            align-items: center;
+            // 给父元素设置主轴2端对齐
+            justify-content: space-between;
+            .left {
+                display: flex;
+                img {
+                    width: 20px;
+                    height: 25px;
+                    margin-left: 5px;
+
+                }
+
+                // 子代 只选中左边的儿子span
+                >span {
+                    margin-left: 5px;
+                    color: @main-color;
+
+
+
+                }
+
+                .downtime {
+                    margin-left: 5px;
+                    span {
+                   width: 15px;
+                   height: 15px;
+                   text-align: center;
+                   line-height: 15px;
+                   background-color: #000;
+                   color: #fff;
+
+
+
+                    }
+
+
+                }
+
+
+            }
+            .right{
+
+            }
+        }
+    }
+}
